@@ -8,10 +8,10 @@ import { ArrowRight, Sparkles, ArrowDown } from "lucide-react";
 import Image from "next/image";
 
 const backgroundImages = [
-  { id: 1, src: "/images/hero-image.jpg", alt: "Fashion Hero 1" },
-  { id: 2, src: "/images/image5.jpg", alt: "Fashion Hero 2" },
-  { id: 3, src: "/images/image3.jpg", alt: "Fashion Hero 3" },
-  { id: 4, src: "/images/imagesM.jpg", alt: "Fashion Hero 4" },
+  { id: 1, src: "/images/heroimage.jpg", alt: "Fashion Hero 1" },
+  { id: 2, src: "/images/image10.jpg", alt: "Fashion Hero 2" },
+  { id: 3, src: "/images/image7.jpg", alt: "Fashion Hero 3" },
+  { id: 4, src: "/images/imagesk.jpg", alt: "Fashion Hero 4" },
 ];
 
 const categories = ["New Arrivals", "Festive Edit", "Co-ords", "Best Sellers", "Kurta Sets", "Plus Size", "LUXE"];

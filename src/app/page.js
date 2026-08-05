@@ -6,6 +6,7 @@ import VideoSection from "@/components/home/VideoSection";
 import Bestsellers from "@/components/home/Bestsellers";
 import NewlyLaunched from "@/components/home/NewlyLaunched";
 import AppBanner from "@/components/home/AppBanner";
+import BlogSection from "@/components/BlogSection";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Bestsellers />
       <AppBanner />
       <RelatedSearches />
+      <BlogSection />
       <CTASection />
     </section>
   );

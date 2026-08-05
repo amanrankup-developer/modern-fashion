@@ -95,6 +95,7 @@ function FooterColumn({ title, links, delay }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay }}
+      className="min-w-0"
     >
       <p
         className="relative inline-block text-base font-semibold uppercase tracking-wide"
@@ -112,11 +113,11 @@ function FooterColumn({ title, links, delay }) {
               href="/shop"
               onClick={preventNavigation}
               style={{ color: TEXT_BODY }}
-              className="group inline-flex cursor-pointer items-center gap-1 text-[15px] transition-all duration-300 hover:translate-x-0.5 hover:text-[#c9a876]"
+              className="group inline-flex max-w-full cursor-pointer items-center gap-1 text-[15px] transition-all duration-300 hover:translate-x-0.5 hover:text-[#c9a876]"
             >
-              <span className="h-px w-0 bg-[#c9a876] transition-all duration-300 group-hover:w-2.5" />
+              <span className="h-px w-0 shrink-0 bg-[#c9a876] transition-all duration-300 group-hover:w-2.5" />
 
-              {item}
+              <span className="break-words">{item}</span>
             </a>
           </li>
         ))}
@@ -152,8 +153,7 @@ export default function Footer() {
       {/* Background Glow */}
       <div className="pointer-events-none absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[#c9a876]/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-12 lg:px-10">
-
+      <div className="relative mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-10 lg:py-12">
         {/* =====================================================
             TOP HEADER
         ====================================================== */}
@@ -163,7 +163,18 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-between gap-6 border-b border-white/10 pb-8 sm:flex-row"
+          className="
+            flex
+            flex-col
+            gap-7
+            border-b
+            border-white/10
+            pb-8
+            sm:gap-8
+            lg:flex-row
+            lg:items-center
+            lg:justify-between
+          "
         >
           {/* Logo */}
 
@@ -171,10 +182,10 @@ export default function Footer() {
             href="#"
             onClick={preventFooterNavigation}
             aria-label="LOOMORA Home"
-            className="cursor-pointer"
+            className="w-fit cursor-pointer"
           >
             <span
-              className="font-serif text-3xl font-medium"
+              className="font-serif text-3xl font-medium sm:text-4xl"
               style={{ color: TEXT_HEAD }}
             >
               Your Brand
@@ -185,47 +196,119 @@ export default function Footer() {
               APP DOWNLOAD BADGES
           ================================================= */}
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div
+            className="
+              flex
+              w-full
+              flex-col
+              items-start
+              gap-4
+              sm:w-auto
+              sm:flex-row
+              sm:items-center
+              sm:justify-end
+              sm:gap-4
+              lg:gap-5
+            "
+          >
             <span
-              className="hidden text-xs font-medium uppercase tracking-wider sm:inline"
+              className="
+                text-[10px]
+                font-medium
+                uppercase
+                tracking-[0.18em]
+                sm:text-xs
+                sm:tracking-wider
+              "
               style={{ color: TEXT_MUTED }}
             >
               Get the app
             </span>
 
-            {/* Google Play */}
-
-            <a
-              href="#"
-              onClick={preventFooterNavigation}
-              aria-label="Get it on Google Play"
-              className="block cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 hover:-translate-y-1"
+            {/* App Badges */}
+            <div
+              className="
+                flex
+                w-full
+                flex-col
+                gap-3
+                min-[420px]:flex-row
+                sm:w-auto
+                sm:items-center
+              "
             >
-              <Image
-                src="/images/google.avif"
-                alt="Get it on Google Play"
-                width={150}
-                height={45}
-                className="h-[42px] w-auto object-contain"
-              />
-            </a>
+              {/* Google Play */}
 
-            {/* App Store */}
+              <a
+                href="#"
+                onClick={preventFooterNavigation}
+                aria-label="Get it on Google Play"
+                className="
+                  block
+                  w-fit
+                  max-w-full
+                  cursor-pointer
+                  overflow-hidden
+                  rounded-lg
+                  transition-transform
+                  duration-300
+                  hover:-translate-y-1
+                "
+              >
+                <Image
+                  src="/images/google.avif"
+                  alt="Get it on Google Play"
+                  width={150}
+                  height={45}
+                  sizes="(max-width: 419px) 180px, (max-width: 639px) 150px, (max-width: 1023px) 150px, 170px"
+                  className="
+                    h-auto
+                    w-[180px]
+                    max-w-full
+                    object-contain
+                    min-[420px]:w-[150px]
+                    sm:w-[160px]
+                    lg:w-[175px]
+                  "
+                />
+              </a>
 
-            <a
-              href="#"
-              onClick={preventFooterNavigation}
-              aria-label="Download on the App Store"
-              className="block cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 hover:-translate-y-1"
-            >
-              <Image
-                src="/images/app-store.avif"
-                alt="Download on the App Store"
-                width={150}
-                height={45}
-                className="h-[42px] w-auto object-contain"
-              />
-            </a>
+              {/* App Store */}
+
+              <a
+                href="#"
+                onClick={preventFooterNavigation}
+                aria-label="Download on the App Store"
+                className="
+                  block
+                  w-fit
+                  max-w-full
+                  cursor-pointer
+                  overflow-hidden
+                  rounded-lg
+                  transition-transform
+                  duration-300
+                  hover:-translate-y-1
+                "
+              >
+                <Image
+                  src="/images/app-store.avif"
+                  alt="Download on the App Store"
+                  width={150}
+                  height={45}
+                  sizes="(max-width: 419px) 180px, (max-width: 639px) 150px, (max-width: 1023px) 150px, 170px"
+                  className="
+                    h-auto
+                    w-[180px]
+                    max-w-full
+                    object-contain
+                    min-[420px]:w-[150px]
+                    sm:w-[160px]
+                    lg:w-[175px]
+                  "
+                />
+              </a>
+            </div>
           </div>
         </motion.div>
 
@@ -233,8 +316,19 @@ export default function Footer() {
             MAIN FOOTER CONTENT
         ====================================================== */}
 
-        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_0.85fr_0.85fr]">
-
+        <div
+          className="
+            grid
+            gap-10
+            py-10
+            sm:grid-cols-2
+            sm:gap-x-8
+            sm:gap-y-12
+            sm:py-12
+            lg:grid-cols-[1.3fr_0.85fr_0.85fr_0.85fr]
+            lg:gap-10
+          "
+        >
           {/* Brand */}
 
           <motion.div
@@ -242,7 +336,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="sm:col-span-2 lg:col-span-1"
+            className="min-w-0 sm:col-span-2 lg:col-span-1"
           >
             <p
               className="max-w-sm text-[15px] leading-relaxed"
@@ -262,7 +356,7 @@ export default function Footer() {
                 Follow Us
               </p>
 
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
 
@@ -275,7 +369,7 @@ export default function Footer() {
                       whileTap={{ scale: 0.95 }}
                       aria-label={social.label}
                       style={{ color: TEXT_BODY }}
-                      className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/15 transition-colors duration-300 hover:text-white ${social.hover}`}
+                      className={`flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full border border-white/15 transition-colors duration-300 hover:text-white ${social.hover}`}
                     >
                       <Icon size={15} />
                     </motion.a>
@@ -319,7 +413,17 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 gap-4 border-t border-white/10 py-10 md:grid-cols-4"
+          className="
+            grid
+            grid-cols-2
+            gap-3
+            border-t
+            border-white/10
+            py-8
+            sm:gap-4
+            sm:py-10
+            md:grid-cols-4
+          "
         >
           {trustBadges.map((item) => {
             const Icon = item.icon;
@@ -327,22 +431,41 @@ export default function Footer() {
             return (
               <div
                 key={item.label}
-                className="group flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[#c9a876]/40 hover:bg-[#c9a876]/10"
+                className="
+                  group
+                  flex
+                  min-w-0
+                  flex-col
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-white/10
+                  bg-white/[0.04]
+                  p-3
+                  text-center
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-[#c9a876]/40
+                  hover:bg-[#c9a876]/10
+                  sm:p-4
+                "
               >
                 <Icon
-                  size={26}
-                  className="text-[#c9a876] transition-transform duration-300 group-hover:scale-110"
+                  size={24}
+                  className="shrink-0 text-[#c9a876] transition-transform duration-300 group-hover:scale-110 sm:size-[26px]"
                 />
 
                 <span
-                  className="mt-2 text-sm font-semibold"
+                  className="mt-2 text-xs font-semibold sm:text-sm"
                   style={{ color: TEXT_HEAD }}
                 >
                   {item.label}
                 </span>
 
                 <span
-                  className="text-xs"
+                  className="mt-0.5 text-[10px] leading-4 sm:text-xs"
                   style={{ color: TEXT_MUTED }}
                 >
                   {item.sub}
@@ -361,11 +484,26 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row"
+          className="
+            flex
+            flex-col
+            items-center
+            gap-4
+            border-t
+            border-white/10
+            pt-6
+            text-sm
+            sm:flex-row
+            sm:flex-wrap
+            sm:justify-between
+          "
         >
           {/* Copyright */}
 
-          <p style={{ color: TEXT_MUTED }}>
+          <p
+            className="text-center sm:text-left"
+            style={{ color: TEXT_MUTED }}
+          >
             &copy;{" "}
             <span suppressHydrationWarning>
               {currentYear}
@@ -375,7 +513,7 @@ export default function Footer() {
 
           {/* Legal */}
 
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <a
               href="#"
               onClick={preventFooterNavigation}
