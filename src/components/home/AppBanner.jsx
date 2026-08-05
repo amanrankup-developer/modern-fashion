@@ -139,7 +139,7 @@ export default function AppBanner() {
                 {/* QR Code */}
                 <div className="flex aspect-square w-full items-center justify-center rounded-xl bg-[#f7f3ec] p-3">
                   <QRCodeSVG
-                    value="https://loomora.com"
+                    value="https://modernfashion.rankuptechnologies.com/"
                     size={140}
                     bgColor="#f7f3ec"
                     fgColor="#1c2c24"
