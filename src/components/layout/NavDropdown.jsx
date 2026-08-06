@@ -45,22 +45,22 @@ export default function NavDropdown({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       className="
-        nav-dropdown
-        absolute
-        left-1/2
-        top-full
-        z-[100]
-        w-[min(960px,94vw)]
-        -translate-x-1/2
-        overflow-hidden
-        rounded-[24px]
-        border
-        border-[#e7e1d5]
-        bg-white
-        text-[#2a2a26]
-        opacity-100
-        shadow-[0_20px_60px_-12px_rgba(47,74,62,0.20)]
-      "
+  nav-dropdown
+  absolute
+  left-1/2
+  top-full
+  z-[100]
+  w-[min(920px,calc(100vw-48px))]
+  -translate-x-1/2
+  overflow-hidden
+  rounded-[24px]
+  border
+  border-[#e7e1d5]
+  bg-white
+  text-[#2a2a26]
+  opacity-100
+  shadow-[0_20px_60px_-12px_rgba(47,74,62,0.20)]
+"
     >
       <div className="grid grid-cols-[1fr_240px]">
 
@@ -68,7 +68,7 @@ export default function NavDropdown({
             CATEGORY COLUMNS
         ========================================== */}
 
-        <div className="grid grid-cols-4 gap-6 p-7 pr-5">
+        <div className="grid grid-cols-4 gap-10 p-7 pr-5">
           {data.filters.map((filter, colIndex) => (
             <motion.div
               key={filter.category}

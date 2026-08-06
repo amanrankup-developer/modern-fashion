@@ -53,9 +53,9 @@ function OccasionTile({ occasion, index }) {
           <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.2em] text-[#f1dfc2] drop-shadow-sm sm:text-[11px]">{occasion.tag}</span>
 
           <div className="mt-1.5 flex items-center justify-between gap-3">
-            <h3 className="font-serif text-2xl font-medium leading-tight text-white drop-shadow-md sm:text-3xl lg:text-4xl xl:text-5xl">{occasion.name}</h3>
+            <h3 className="font-serif text-2xl font-medium leading-tight text-white! drop-shadow-md sm:text-3xl lg:text-4xl xl:text-5xl">{occasion.name}</h3>
 
-            <span className="flex h-9 w-9 shrink-0 -translate-x-2 items-center justify-center rounded-full bg-white text-[#2a2a26] opacity-0 shadow-sm transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:h-10 sm:w-10">
+            <span className="flex h-9 w-9 shrink-0 -translate-x-2 items-center justify-center rounded-full bg-white text-[#dbdbca] opacity-0 shadow-sm transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:h-10 sm:w-10">
               <ArrowUpRight size={17} />
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function NewlyLaunched() {
             Newly Launched
           </span>
 
-          <h2 className="mt-3 font-serif text-3xl font-medium leading-[1.08] text-[#2a2a26] sm:text-4xl lg:text-5xl xl:text-6xl">
+          <h2 className="mt-3 font-serif text-3xl font-medium leading-[1.08] text-[#e7e7e0] sm:text-4xl lg:text-5xl xl:text-6xl">
             Discover Our Latest Styles
           </h2>
 

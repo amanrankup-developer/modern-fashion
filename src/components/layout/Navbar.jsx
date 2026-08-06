@@ -252,16 +252,16 @@ export default function Navbar() {
             />
 
             <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{
-                type: "spring",
-                damping: 26,
-                stiffness: 240,
-              }}
-              className="fixed inset-y-0 right-0 z-[70] w-[88%] max-w-[420px] bg-[#fffdf9] shadow-[-20px_0_60px_rgba(0,0,0,0.16)]"
-            >
+  initial={{ x: "100%" }}
+  animate={{ x: 0 }}
+  exit={{ x: "100%" }}
+  transition={{
+    type: "spring",
+    damping: 26,
+    stiffness: 240,
+  }}
+  className="fixed inset-y-0 right-0 z-[1100] flex w-[88%] max-w-[420px] flex-col overflow-hidden bg-[#fffdf9] shadow-[-20px_0_60px_rgba(0,0,0,0.16)]"
+>
               <div className="flex h-full flex-col">
                 {/* Drawer Header */}
                 <div className="flex h-[76px] items-center justify-between border-b border-[#e7e1d5] px-5 sm:px-6">

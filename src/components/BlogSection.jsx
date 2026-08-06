@@ -83,10 +83,10 @@ export default function BlogSection() {
             <span className="italic text-[#3f6d58]">Style & Craft</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#716d64] sm:text-base">
-            Discover thoughtful stories, styling inspiration and the rich
-            craftsmanship behind contemporary Indian fashion.
-          </p>
+        <p className="blog-description mx-auto mt-4 max-w-3xl text-sm leading-6 text-[#6b6659] sm:text-base sm:leading-7 lg:text-lg">
+  Discover thoughtful stories, styling inspiration and the rich craftsmanship
+  behind contemporary Indian fashion.
+</p>
         </motion.div>
 
         {/* Editorial Grid */}
@@ -225,8 +225,8 @@ export default function BlogSection() {
           className="mt-10 flex justify-center lg:mt-12"
         >
           <Link
-            href="/blog"
-            className="group inline-flex items-center gap-3 rounded-full border border-[#30463b] bg-[#30463b] px-7 py-3.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#263a31] hover:shadow-[0_12px_30px_rgba(48,70,59,0.18)]"
+            href="/"
+            className="group inline-flex items-center gap-3 rounded-full border border-[#82a192] bg-[#82c0a2] px-7 py-3.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#628c79] hover:shadow-[0_12px_30px_rgba(48,70,59,0.18)]"
           >
             Explore All Stories
 
